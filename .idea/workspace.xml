@@ -206,10 +206,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_question.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_question.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/_question.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="101" selection-start="426" selection-end="426" vertical-scroll-proportion="0.41666666">
+            <state line="10" column="101" selection-start="426" selection-end="426" vertical-scroll-proportion="-6.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="8" selection-start="194" selection-end="194" vertical-scroll-proportion="0.6640625">
               <folding />
             </state>
           </provider>
@@ -261,7 +270,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/question.rb" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$USER_HOME$/.rvm/gems/ruby-2.0.0-rc2@collective-mind/gems/acts_as_votable-0.5.0/lib/acts_as_votable/voter.rb" />
         <option value="$PROJECT_DIR$/app/models/solution.rb" />
@@ -277,6 +285,7 @@
         <option value="$PROJECT_DIR$/app/views/users/_user.html.erb" />
         <option value="$USER_HOME$/.rvm/gems/ruby-2.0.0-rc2@collective-mind/gems/zurb-foundation-4.2.3/js/foundation/foundation.topbar.js" />
         <option value="$PROJECT_DIR$/Guardfile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -661,7 +670,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="52" width="1600" height="824" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -669,7 +678,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26903227" sideWeight="0.6046832" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26903227" sideWeight="0.6046832" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3953168" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39944905" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -862,7 +871,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_question.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="101" selection-start="426" selection-end="426" vertical-scroll-proportion="0.41666666">
+        <state line="10" column="101" selection-start="426" selection-end="426" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="8" selection-start="194" selection-end="194" vertical-scroll-proportion="0.6640625">
           <folding />
         </state>
       </provider>
