@@ -1,0 +1,62 @@
+
+.home-page,
+.questions-page {
+
+  .tags {
+    .tag {
+      padding:emCalc(5px) emCalc(10px);
+
+      span {
+        font-size: 12px;
+        color: lighten($body-font-color, 30%);
+      }
+    }
+  }
+
+  .questions {
+
+    .row { margin-bottom: $block-grid-default-spacing }
+
+    blockquote {
+      margin: 0;
+      width: 100%;
+
+      cite {
+        a {
+          color: $primary-color;
+        }
+
+        a:hover {
+          color: darken($primary-color, 5%);
+        }
+      }
+    }
+
+    .panel {
+      border: 1px solid $border-color;
+    }
+
+    .question {
+
+      .activity {
+        margin: 0;
+
+        li {
+          font-size: 20px;
+          line-height: 1;
+          color: lighten($body-font-color, 20%);
+
+          span {
+            font-size: 12px;
+            color: lighten($body-font-color, 50%);
+          }
+        }
+      }
+
+      .breadcrumbs {
+        float: left;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

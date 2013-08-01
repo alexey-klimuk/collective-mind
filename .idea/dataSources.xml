@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3098035226">
+    <data-source source="LOCAL" name="Rails collective-mind: production" product="MySQL" version="5.5.31-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="5116e573-8faf-4dbd-8dc1-febd9bd2b39e">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/collective_mind</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfdbdfd9dfc9df93df92df9ddf9cdf9f</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine31/config/jdbc-drivers/mysql-connector-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine31/config/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails collective-mind: test" product="MySQL" version="5.5.31-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="0f706bb1-1d40-402a-8ed1-e795cc2552d1">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/collective_mind_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfdbdfd9dfc9df93df92df9ddf9cdf9f</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine31/config/jdbc-drivers/mysql-connector-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine31/config/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails collective-mind: development" product="MySQL" version="5.5.31-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="d7cb8bf5-f8ef-496f-b044-2710fd14e8f8">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/collective_mind</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfdbdfd9dfc9df93df92df9ddf9cdf9f</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine31/config/jdbc-drivers/mysql-connector-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine31/config/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails collective-mind: cucumber" product="MySQL" version="5.5.31-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="d251e9fa-9154-46ca-8da6-52321f55795c">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/collective_mind_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfdbdfd9dfc9df93df92df9ddf9cdf9f</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine31/config/jdbc-drivers/mysql-connector-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine31/config/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+

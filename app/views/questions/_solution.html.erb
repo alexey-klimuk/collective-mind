@@ -1,0 +1,16 @@
+<div class="row solution">
+  <div class="large-1 columns vote">
+    <%= link_to '', solutions_vote_path(id: solution.id, vote: true), class: 'general-enclosed foundicon-up-arrow' %>
+    <span>
+      <strong><%= solution.rating %></strong>
+    </span>
+    <%= link_to '', solutions_vote_path(id: solution.id, vote: false), class: 'general-enclosed foundicon-down-arrow' %>
+  </div>
+  <div class="large-8 columns main">
+    <p><%= solution.body.gsub(/\n/, '<br/>').html_safe %></p>
+  </div>
+  <div class="large-3 columns tags">
+    <span class="at"><%= time_ago_in_words(solution.created_at) %> ago</span><br>
+    <span class="by">by <%= link_to solution.user.full_name, user_path(solution.user) %></span>
+  </div>
+</div>

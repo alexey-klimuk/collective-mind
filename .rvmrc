@@ -1,0 +1,4 @@
+rvm_gemset_create_on_use_flag=1
+rvm 2.0.0-rc2
+rvm --create use ruby-2.0.0-rc2@collective-mind
+

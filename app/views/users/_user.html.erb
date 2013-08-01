@@ -1,0 +1,21 @@
+<% if user %>
+    <div class="left large-2 columns">
+      <%= link_to user.full_name, user_path(user), :class => 'button tiny radius secondary' %>
+      <ul class="activity no-bullet">
+        <li>
+          <strong>
+            <%= count(user.questions.length) %>
+          </strong>
+          <%= "question".pluralize(user.questions.length)%>
+        </li>
+        <li>
+          <strong><%= count(user.solutions.length) %></strong>
+          <%= "solution".pluralize(user.solutions.length)%>
+        </li>
+        <li>
+          <strong><%= count(user.votes.length) %></strong>
+          <%= "vote".pluralize(0)%>
+        </li>
+      </ul>
+    </div>
+<% end %>

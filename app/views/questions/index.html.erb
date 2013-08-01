@@ -1,0 +1,26 @@
+<% content_for :title, title('Questions') %>
+
+<div class="questions row">
+  <div class="large-9 columns">
+    <%= render :partial => 'home/question', :collection => @questions %>
+  </div>
+  <div class="large-3 columns">
+    <div class="count">
+      <strong><%=  number_with_delimiter(Question.active.length, delimeter: ',') %></strong><br>
+      questions
+    </div>
+
+    <h3 class="subheader">Related Tags</h3>
+    <ul class="no-bullet tags">
+      <% @tags.each do |t| %>
+        <li class="tag">
+          <%= link_to t.name, tagged_questions_path(t.name),  :class => 'button tiny radius secondary' %>
+          <span>x&nbsp;<%= t.count %></span>
+        </li>
+      <% end %>
+    </ul>
+
+  </div>
+
+</div>
+

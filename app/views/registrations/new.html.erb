@@ -1,0 +1,20 @@
+<% content_for :title, title('Registration') %>
+
+<h3 class="subheader">Registration</h3>
+
+<%= semantic_form_for(resource, :url => registration_url(resource_name), :html => {:autocomplete => "off"}) do |f| %>
+
+    <%= f.inputs do %>
+      <%= f.semantic_fields_for :profile do |form| %>
+        <%= f.input :email, :label => ':your email', :as => :email %>
+        <%= f.input :password, :label => ':create a password' %>
+        <%= f.input :password_confirmation, :label => ':retype password' %>
+        <%= form.input :first_name, :label => ':first name' %>
+        <%= form.input :last_name, :label => ':last name' %>
+        <%= form.input :birth, :as => :string, :label => ':birth date', :input_html => { :class => 'fdatepicker' }   %>
+      <% end %>
+
+        <%= f.action :submit, :label => 'sign up', :button_html => {:class => "tiny button secondary"} %>
+
+    <% end %>
+<% end %>

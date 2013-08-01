@@ -1,0 +1,31 @@
+@mixin gradient($from, $to) {
+  /* fallback/image non-cover color */
+  background: $from;
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient($from, $to);
+
+  /* Safari 4+, Chrome 1+ */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-linear-gradient($from, $to);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient($from, $to);
+
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+@mixin box-shadow($left, $top, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $left $top $blur $spread $color;
+    -moz-box-shadow:inset $left $top $blur $spread $color;
+    box-shadow:inset $left $top $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $left $top $blur $spread $color;
+    -moz-box-shadow: $left $top $blur $spread $color;
+    box-shadow: $left $top $blur $spread $color;
+  }
+}
+

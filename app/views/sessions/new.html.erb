@@ -1,0 +1,15 @@
+<% content_for :title, title('Sign in') %>
+
+<h3 class="subheader">Sign in</h3>
+
+<%= semantic_form_for(@user, :url => session_url(resource_name)) do |f| %>
+
+    <%= f.inputs do %>
+
+        <%= f.input :email, :label => ':your email', :as => :email %>
+        <%= f.input :password, :label => ':password' %>
+
+        <%= f.action :submit, :label => 'sign in', :button_html => {:class => "tiny button secondary"} %>
+
+    <% end %>
+<% end %>

@@ -1,0 +1,11 @@
+<% content_for :title, title('Users') %>
+
+<h3 class="subheader">Users</h3>
+
+<div class="users">
+  <% @users.in_groups_of(6) do |group| %>
+    <div class="row">
+      <%= render :partial => 'users/user', :collection => group %>
+    </div>
+  <% end %>
+</div>

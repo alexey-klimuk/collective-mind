@@ -1,0 +1,29 @@
+<header class="contain-to-grid sticky">
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name"><h1><a href="/">Collective Mind</a></h1></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <% if user_signed_in? %>
+          <li class="has-dropdown"><a><%= current_user.email %></a>
+            <ul class="dropdown">
+              <% if current_user.is_active_admin? %>
+              <li><%= link_to "Admin", '/admin', 'data-no-turbolink' => true  %></li>
+              <% end %>
+              <li><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
+              <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+            </ul>
+          </li>
+          <% else %>
+          <li><%= link_to 'Register', new_user_registration_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to 'Sign in', new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </section>
+
+    </nav>
+</header>

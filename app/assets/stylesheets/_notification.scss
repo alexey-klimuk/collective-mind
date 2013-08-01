@@ -1,0 +1,107 @@
+.notification {
+  display: none;
+}
+.notification.okmnote {
+  display: block;
+}
+
+.ui-pnotify {
+  height: auto;
+  z-index: 9999;
+  margin-left: 10px;
+  position: fixed;
+  max-width: 20%;
+  min-width: 280px;
+
+  .lt-ie7 { position: absolute; }
+
+  &.error .ui-pnotify-container {
+    border-color: $color-error;
+    background-color: desaturate(lighten($color-error, 40%), 15%);
+
+    .ui-pnotify-icon { color: $color-error; }
+  }
+
+  &.warning .ui-pnotify-container {
+    border-color: $color-warning;
+    background-color: desaturate(lighten($color-warning, 40%), 15%);
+
+    .ui-pnotify-icon { color: $color-warning; }
+  }
+
+  &.success .ui-pnotify-container {
+    border-color: $color-success;
+    background-color: desaturate(lighten($color-success, 40%), 15%);
+
+    .ui-pnotify-icon { color: $color-success; }
+  }
+
+  &.notice .ui-pnotify-container {
+    border-color: $color-notice;
+    background-color: desaturate(lighten($color-notice, 40%), 15%);
+
+    .ui-pnotify-icon { color: $color-notice; }
+  }
+}
+
+.ui-pnotify-container {
+  @include rhythm(0,.214,.214);
+  @include border-radius(4px);
+  border: 1px solid transparent;
+}
+
+.ui-pnotify-closer, .ui-pnotify-sticker {
+  float: right;
+  margin-right: .2em;
+  top: .363em;
+
+  .icon-remove {
+    @extend .foundicon-remove;
+    @extend .general;
+    @extend [class*="general foundicon-"] !optional;
+  }
+
+}
+
+$pnotify-icon-square-dimension: 20px;
+.ui-pnotify-icon {
+  font-size: $pnotify-icon-square-dimension;
+  line-height: $pnotify-icon-square-dimension;
+  width: $pnotify-icon-square-dimension;
+  position: absolute;
+  top: .363em;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.ui-pnotify-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+  margin-left: $pnotify-icon-square-dimension + 10px;
+}
+
+
+/* History Pulldown
+----------------------------------*/
+.ui-pnotify-history-container {
+	position: absolute;
+	top: 0;
+	right: 18px;
+	width: 70px;
+	border-top: none;
+	/* Ensure that the history container is on top of the notices. */
+	z-index: 10000;
+}
+.ui-pnotify-history-container .ui-pnotify-history-header {
+	padding: 2px;
+}
+.ui-pnotify-history-container button {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+}
+.ui-pnotify-history-container .ui-pnotify-history-pulldown {
+	display: block;
+	margin: 0 auto;
+}

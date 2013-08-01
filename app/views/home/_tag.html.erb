@@ -1,0 +1,6 @@
+<% if tag %>
+    <div class="tag left large-2 columns">
+      <%= link_to tag.name, tagged_questions_path(tag.name), :class => 'button tiny radius secondary' %>
+      <span>x&nbsp;<%= tag.count %></span>
+    </div>
+<% end %>

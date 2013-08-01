@@ -1,0 +1,27 @@
+<% content_for :title, title('User') %>
+
+<h3 class="subheader">
+  <%= @user.full_name %>
+</h3>
+
+<div class="user-info row left">
+  <div class="large-2 columns">
+    <strong>Avatar</strong>
+  </div>
+  <div class="large-10 columns">
+    <table>
+      <tr>
+        <td>age:</td>
+        <td><%= @user.age %></td>
+      </tr>
+      <tr>
+        <td>member for:</td>
+        <td class="blue"><%= time_ago_in_words @user.created_at %></td>
+      </tr>
+      <tr>
+        <td>seen:</td>
+        <td class="red"><%= time_ago_in_words @user.current_sign_in_at %> ago</td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  crud:
+    create:
+      success: "The %{model} has been successfully created."
+      fail: "Failed to create the %{model}!"
+    read:
+      fail: "Failed to find the %{model}!"
+    update:
+      success: "The %{model} has been successfully updated."
+      fail: "Failed to update the %{model}!"
+    delete:
+      success: "The %{model} has been successfully deleted."
+      fail: "The %{model} could not be deleted!"
+    submit:
+      success: "The %{model} has been successfully submitted."
+      fail: "%{model} submission failed!"
+      duplicate: "The %{model} has already been submitted."
+    vote:
+      success: "The %{model} has been successfully voted."
+      fail: "Failed to vote the %{model}!"
+      duplicate: "The %{model} has already been voted."
+    comment:
+      success: "The %{model} has been successfully commented."
+      fail: "Failed to comment the %{model}!"
+
+  count:
+    centi: ""
+    unit: ""
+    hundred: ""
+    thousand: "k"
+    million: "M"
+    billion: "B"
+    trillion: "T"
+    quadrillion: "Q"
+
+  activerecord:
+     models:
+       user:
+         zero:  Users
+         one:   User
+         few:   Users
+         other: Users
+       question:
+         zero:  Questions
+         one:   Question
+         few:   Questions
+         other: Questions
+       solution:
+         zero:  Solutions
+         one:   Solution
+         few:   Solutions
+         other: Solutions

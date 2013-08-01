@@ -1,0 +1,11 @@
+<% content_for :title, title('Tags') %>
+
+<h3 class="subheader">Tags</h3>
+
+<div class="tags">
+  <% @tags.in_groups_of(6) do |group| %>
+    <div class="row">
+      <%= render :partial => 'home/tag', :collection => group %>
+    </div>
+  <% end %>
+</div>

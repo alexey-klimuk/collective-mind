@@ -1,0 +1,79 @@
+// Place all the styles related to the Questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.questions {
+  .count {
+    font-size: 14px;
+    color: lighten($body-font-color, 30%);
+    margin-bottom: $block-grid-default-spacing;
+
+    strong {
+      font-size: 22px;
+      color: lighten($body-font-color, 10%);
+    }
+  }
+}
+
+.question {
+
+  .row.solution {
+    border-bottom: 1px solid $border-color;
+    padding-top: $column-gutter/3;
+
+    .columns {
+      min-height: 80px;
+    }
+
+  }
+
+  .row.solution:last-of-type {
+    margin-bottom: $column-gutter;
+  }
+
+  .vote{
+
+    span {
+      margin: $column-gutter/4 0;
+    }
+
+    a {
+      font-size: emCalc($question-font-size + 6px);
+    }
+
+    a, span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .tags {
+
+    ul{
+      margin-left: $column-gutter/2;
+    }
+
+    span {
+      font-weight: 300;
+    }
+
+    .by {
+      font-size: 14px;
+    }
+
+    .at {
+      font-size: 16px;
+      color: lighten($body-font-color, 30%);
+    }
+  }
+
+  .main {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+  }
+
+  p {
+    font-size: $question-font-size;
+  }
+
+}

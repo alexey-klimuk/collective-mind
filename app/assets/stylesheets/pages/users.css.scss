@@ -1,0 +1,30 @@
+.users-page,
+.registrations-page,
+.sessions-page {
+
+  .user-info {
+    table {
+      font-size: 14px;
+
+      .red {
+        color: lighten($red-color, 10%);
+      }
+
+      .blue {
+        color: $blue-color;
+      }
+    }
+  }
+
+  .users {
+    .activity {
+      font-size: 12px;
+      color: lighten($body-font-color, 30%);
+      strong {
+        font-size: 16px;
+        color: $primary-color;
+      }
+    }
+  }
+
+}

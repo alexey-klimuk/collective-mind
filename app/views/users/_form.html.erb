@@ -1,0 +1,14 @@
+<%= semantic_form_for @user do |f| %>
+    <%= f.inputs do %>
+      <%=f.semantic_fields_for :profile do |form| %>
+
+        <%= f.input :email, :label => "your email:" %>
+        <%= form.input :first_name, :label => 'first name:' %>
+        <%= form.input :last_name, :label => 'last name:' %>
+        <%= form.input :birth, :as => :string, :label => 'birth date:', :input_html => { :class => 'fdatepicker' }   %>
+
+      <% end %>
+
+      <%= f.action :submit, :label => 'update user', :button_html => {:class => "tiny button secondary"} %>
+    <% end %>
+<% end %>

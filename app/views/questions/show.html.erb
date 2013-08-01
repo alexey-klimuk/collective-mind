@@ -1,0 +1,45 @@
+<% content_for :title, title('Question') %>
+
+<div class="question">
+
+  <h3 class="subheader">
+    <%= @question.title %>
+  </h3>
+
+  <div class="row ">
+    <div class="large-1 columns vote">
+      <%= link_to '', questions_vote_path(id: @question.id, vote: true), class: 'general-enclosed foundicon-up-arrow' %>
+      <span>
+        <strong><%= @question.rating %></strong>
+      </span>
+      <%= link_to '', questions_vote_path(id: @question.id, vote: false), class: 'general-enclosed foundicon-down-arrow' %>
+    </div>
+    <div class="large-8 columns main">
+      <p><%= @question.body.gsub(/\n/, '<br/>').html_safe %></p>
+    </div>
+    <div class="large-3 columns tags">
+      <h4 class="subheader">tagged</h4>
+      <ul class="circle">
+        <% @question.tags.each do |t| %>
+          <li><%= link_to t.name, tagged_questions_path(t.name) %></li>
+        <% end %>
+      </ul>
+
+      <span class="at"><%= time_ago_in_words(@question.created_at) %> ago</span><br>
+      <span class="by">by <%= link_to @question.user.full_name, user_path(@question.user) %></span>
+    </div>
+  </div>
+
+  <% if @question.solutions.length > 0 %>
+    <h3 class="subheader">
+      <%= @question.solutions.length %> <%= "Answer".pluralize(@question.solutions.length)%>
+    </h3>
+    <%= render partial: 'questions/solution', collection: @question.solutions %>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <h3 class="subheader">Your Answer</h3>
+    <%= render 'solutions/form' %>
+  <% end %>
+
+</div>

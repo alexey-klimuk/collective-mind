@@ -1,0 +1,12 @@
+<%= semantic_form_for @solution, :url => question_solutions_path(@question) do |f| %>
+
+    <%= f.inputs do %>
+        <%= f.input :user_id, :as => :hidden, :label => false, :input_html => { :value => current_user.id } %>
+        <%= f.input :question_id, :as => :hidden, :label => false, :input_html => { :value => @question.id } %>
+
+        <%= f.input :body, :as => :text, :label => ':solution' %>
+
+        <%= f.action :submit, :label => 'answer', :button_html => {:class => "tiny button secondary"} %>
+
+    <% end %>
+<% end %>

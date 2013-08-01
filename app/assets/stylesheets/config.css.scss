@@ -1,0 +1,29 @@
+
+$em-base: 16px !default;
+// Working in ems is annoying. Think in pixels by using this handy function, emCalc(#px)
+@function emCalc($pxWidth) {
+  @return $pxWidth / $em-base * 1em;
+}
+
+$content-width: emCalc(1000px);
+
+$red-color: #f52b22;
+$blue-color: #2ba6cb;
+$green-color: #60cb6a;
+$orange-color: #f4ae2a;
+
+$topbar-bg-is-gradient: true !default;
+$topbar-bg-gradient: #0a1927 !default;
+$topbar-bg: #111 !default;
+
+$border-color: lighten(#222222, 70%);
+$body-bg-color: #fffff9;
+
+$header-padding: emCalc(20px);
+
+$question-font-size: 14px;
+
+$color-error: $alert-color;
+$color-warning: $orange-color;
+$color-success: $success-color;
+$color-notice: $primary-color;

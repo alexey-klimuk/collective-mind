@@ -1,0 +1,32 @@
+<div class="question row panel radius">
+    <div class="large-2 columns">
+      <ul class="no-bullet activity">
+        <li>
+          <strong><%= count(question.votes.length) %></strong>
+          <span><%= "vote".pluralize(0)%></span>
+        </li>
+        <li>
+          <strong><%= count(question.solutions.length.to_i) %></strong>
+          <span><%= "solution".pluralize(question.solutions.length)%></span>
+        </li>
+        <li>
+          <strong><%= count(0) %></strong>
+          <span><%= "view".pluralize(0)%></span>
+        </li>
+      </ul>
+
+    </div>
+    <div class="large-10 columns">
+      <blockquote class="left">
+        <h5 class="title"><%= link_to question.title, question_path(question) %></h5>
+        <ul class="breadcrumbs">
+          <% question.tags.each do |t| %>
+            <li><%= link_to t.name, tagged_questions_path(t.name) %></li>
+          <% end %>
+        </ul>
+        <cite class="right">
+          <%= time_ago_in_words(question.created_at) %> ago by <%= link_to question.user.full_name, user_path(question.user) %>
+        </cite>
+      </blockquote>
+    </div>
+</div>
