@@ -71,3 +71,8 @@ en:
          one:   Solution
          few:   Solutions
          other: Solutions
+       friendship:
+         zero:  Friendships
+         one:   Friendship
+         few:   Friendships
+         other: Friendships

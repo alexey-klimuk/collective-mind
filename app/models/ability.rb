@@ -23,6 +23,9 @@ class Ability
       can [:edit, :delete], Solution, :user_id => user.id
       can [:create, :vote], Solution
       can [:edit, :update], User, :id => user.id
+
+      can :create, Friendship
+      can :destroy, Friendship, :user_id => user.id
     end
 
   end

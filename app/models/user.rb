@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
   has_many :roles, :through => :role_users
   has_many :questions
   has_many :solutions
+  has_many :friendships
+  has_many :friends, through: :friendships
 
   accepts_nested_attributes_for :profile
 

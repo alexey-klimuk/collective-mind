@@ -1,15 +1,13 @@
 CollectiveMind::Application.routes.draw do
 
   root to: 'home#index'
-
+  ActiveAdmin.routes(self)
   get 'about', to: 'home#about'
   get 'help', to: 'home#help'
   get 'contact', to: 'home#contact'
 
   get 'tags', to: 'home#tags', as: :tags
   get 'questions/tagged/:tag', to: 'questions#index', as: :tagged_questions
-
-  ActiveAdmin.routes(self)
 
   devise_for :users, controllers: { registrations: 'registrations',
                                     sessions: 'sessions'}
@@ -21,6 +19,7 @@ CollectiveMind::Application.routes.draw do
     resources :solutions, only: [:create]
   end
 
+  resources :friendships, only: [:create, :destroy]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
