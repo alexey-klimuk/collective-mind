@@ -13,8 +13,8 @@ CollectiveMind::Application.routes.draw do
                                     sessions: 'sessions'}
 
   resources :users, only: [:index, :show, :update, :edit]
-  get 'questions/vote', to: 'questions#vote'
-  get 'solutions/vote', to: 'solutions#vote'
+  post 'questions/vote', to: 'questions#vote'
+  post 'solutions/vote', to: 'solutions#vote'
   resources :questions do
     resources :solutions, only: [:create]
   end

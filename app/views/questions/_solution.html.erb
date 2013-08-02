@@ -1,10 +1,10 @@
 <div class="row solution">
   <div class="large-1 columns vote">
-    <%= link_to '', solutions_vote_path(id: solution.id, vote: true), class: 'general-enclosed foundicon-up-arrow' %>
+    <%= link_to '', solutions_vote_path(id: solution.id, vote: true), method: :post, class: 'general-enclosed foundicon-up-arrow' %>
     <span>
       <strong><%= solution.rating %></strong>
     </span>
-    <%= link_to '', solutions_vote_path(id: solution.id, vote: false), class: 'general-enclosed foundicon-down-arrow' %>
+    <%= link_to '', solutions_vote_path(id: solution.id, vote: false), method: :post, class: 'general-enclosed foundicon-down-arrow' %>
   </div>
   <div class="large-8 columns main">
     <p><%= solution.body.gsub(/\n/, '<br/>').html_safe %></p>

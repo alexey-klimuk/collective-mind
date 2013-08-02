@@ -25,7 +25,7 @@ class FriendshipsController < ApplicationController
   private
 
     def dest_path
-      user_path(current_user)
+      :back
     end
 
 end

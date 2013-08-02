@@ -8,11 +8,11 @@
 
   <div class="row ">
     <div class="large-1 columns vote">
-      <%= link_to '', questions_vote_path(id: @question.id, vote: true), class: 'general-enclosed foundicon-up-arrow' %>
+      <%= link_to '', questions_vote_path(id: @question.id, vote: true), method: :post, class: 'general-enclosed foundicon-up-arrow' %>
       <span>
         <strong><%= @question.rating %></strong>
       </span>
-      <%= link_to '', questions_vote_path(id: @question.id, vote: false), class: 'general-enclosed foundicon-down-arrow' %>
+      <%= link_to '', questions_vote_path(id: @question.id, vote: false), method: :post, class: 'general-enclosed foundicon-down-arrow' %>
     </div>
     <div class="large-8 columns main">
       <p><%= @question.body.gsub(/\n/, '<br/>').html_safe %></p>

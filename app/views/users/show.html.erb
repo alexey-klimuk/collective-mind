@@ -23,5 +23,12 @@
         <td class="red"><%= time_ago_in_words @user.current_sign_in_at %> ago</td>
       </tr>
     </table>
+    <% if current_user && current_user != @user %>
+      <% if current_user.friends.include? @user %>
+        <%= button_to "Remove Friend", current_user.friendships.find_by_friend_id(@user.id), method: :delete %>
+      <% else %>
+        <%= button_to "Add Friend", friendships_path(friend_id: @user), method: :post %>
+      <% end %>
+    <% end %>
   </div>
 </div>
