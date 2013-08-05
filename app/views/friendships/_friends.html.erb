@@ -1,0 +1,10 @@
+<% if defined?(:friends) %>
+  <ul class="no-bullet">
+    <% friends.each do |f| %>
+      <li>
+        <%= link_to f.full_name, user_path(f), :class => 'button tiny radius' %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+

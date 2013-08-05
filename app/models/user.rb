@@ -3,23 +3,29 @@ class User < ActiveRecord::Base
   acts_as_voter
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role_ids, :profile_attributes
-  
+
+  after_create :assign_member_role
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :trackable, :validatable, :timeoutable, :timeout_in => 120.minutes
+
+  validates_presence_of :password_confirmation, :on => :create
 
   has_one :profile, :dependent => :destroy
   has_many :role_users, :dependent => :destroy
   has_many :roles, :through => :role_users
   has_many :questions
   has_many :solutions
+
   has_many :friendships
   has_many :friends, through: :friendships
 
-  accepts_nested_attributes_for :profile
+  has_many :inverse_friendships, class_name: 'Friendship', foreign_key: :friend_id
+  has_many :inverse_friends, through: :inverse_friendships, source: :user
 
-  validates_presence_of :password_confirmation, :on => :create
+  accepts_nested_attributes_for :profile
 
   def full_name
     profile.full_name
@@ -54,6 +60,13 @@ class User < ActiveRecord::Base
 
   def roles_as_strings
     roles.pluck(:name)
+  end
+
+  private
+
+  def assign_member_role
+    self.roles << Role.member
+    self.save!
   end
 
 end

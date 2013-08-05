@@ -7,8 +7,15 @@
 <div class="user-info row left">
   <div class="large-2 columns">
     <strong>Avatar</strong>
+    <% if current_user && current_user != @user %>
+      <% if current_user.friends.include? @user %>
+        <%= button_to "Remove Friend", current_user.friendships.find_by_friend_id(@user.id), method: :delete %>
+      <% else %>
+        <%= button_to "Add Friend", friendships_path(friend_id: @user), method: :post %>
+      <% end %>
+    <% end %>
   </div>
-  <div class="large-10 columns">
+  <div class="large-3 columns">
     <table>
       <tr>
         <td>age:</td>
@@ -23,12 +30,25 @@
         <td class="red"><%= time_ago_in_words @user.current_sign_in_at %> ago</td>
       </tr>
     </table>
-    <% if current_user && current_user != @user %>
-      <% if current_user.friends.include? @user %>
-        <%= button_to "Remove Friend", current_user.friendships.find_by_friend_id(@user.id), method: :delete %>
-      <% else %>
-        <%= button_to "Add Friend", friendships_path(friend_id: @user), method: :post %>
+  </div>
+  <div class="large-7 columns">
+    <div class="section-container vertical-tabs" data-section="vertical-tabs">
+
+      <section>
+        <p class="title" data-section-title><a href="#">Friends</a></p>
+        <div class="content" data-section-content>
+          <%= render partial: 'friendships/friends', locals: { friends: @user.friends } %>
+        </div>
+      </section>
+
+      <% if my_account?(@user) %>
+      <section>
+        <p class="title" data-section-title><a href="#">Friended by</a></p>
+        <div class="content" data-section-content>
+          <%= render partial: 'friendships/friends', locals: { friends: @user.inverse_friends } %>
+        </div>
+      </section>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
