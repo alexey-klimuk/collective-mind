@@ -7,12 +7,11 @@ app = namespace('CollectiveMind')
 
 notifications_stack =
   dir1: "down"
-  dir2: "right"
-  push: "top"
+  dir2: "left"
   spacing1: 10
   spacing2: 10
-  firstpos1: 10
-  firstpos2: null
+  firstpos1: 20
+  firstpos2: 20
 
 
 $.extend($.pnotify.defaults,

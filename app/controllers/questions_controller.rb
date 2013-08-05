@@ -6,12 +6,8 @@ class QuestionsController < ApplicationController
   authorize_resource class: 'Question'
 
   def index
-    if params[:tag]
-      @questions = Question.active.tagged_with(params[:tag])
-    else
-      @questions = Question.active
-    end
-    @tags = Question.tag_counts_on(:tags).order('count desc')
+    @questions = Question.search(params)
+    @tags = @questions.tag_counts_on(:tags).order('count desc')
   end
 
   def new

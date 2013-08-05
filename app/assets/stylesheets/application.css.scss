@@ -46,7 +46,16 @@ body {
   }
 
   header {
+    h1 {
+      display: inline-block;
+      float: left;
+    }
 
+    #search {
+      form {
+        display: inline-block;
+      }
+    }
   }
 
   #content {

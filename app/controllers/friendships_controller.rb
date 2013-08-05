@@ -22,16 +22,6 @@ class FriendshipsController < ApplicationController
     end
   end
 
-  def update
-    @friendship = current_user.friendships.find(params[:id])
-    @friendship.confirmed_at = Time.now
-    if @friendship.save
-      redirect_to dest_path, flash: { success: t('crud.update.success') }
-    else
-      redirect_to dest_path, flash: { success: t('crud.update.fail') }
-    end
-  end
-
   private
 
     def dest_path

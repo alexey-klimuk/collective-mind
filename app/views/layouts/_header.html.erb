@@ -1,7 +1,12 @@
 <header class="contain-to-grid sticky">
     <nav class="top-bar">
       <ul class="title-area">
-        <li class="name"><h1><a href="/">Collective Mind</a></h1></li>
+        <li class="name">
+          <h1><a href="/">Collective Mind</a></h1>
+          <%= form_tag questions_path, :method => 'get', html: { id: 'search' } do %>
+              <%= text_field_tag :search, params[:search], placeholder: 'search' %>
+          <% end %>
+        </li>
       </ul>
 
       <section class="top-bar-section">

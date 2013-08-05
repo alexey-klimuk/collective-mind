@@ -41,14 +41,13 @@
         </div>
       </section>
 
-      <% if my_account?(@user) %>
       <section>
         <p class="title" data-section-title><a href="#">Friended by</a></p>
         <div class="content" data-section-content>
           <%= render partial: 'friendships/friends', locals: { friends: @user.inverse_friends } %>
         </div>
       </section>
-      <% end %>
+
     </div>
   </div>
 </div>
