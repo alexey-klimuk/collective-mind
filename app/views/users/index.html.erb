@@ -1,6 +1,12 @@
 <% content_for :title, title('Users') %>
 
-<h3 class="subheader">Users</h3>
+<h3 class="subheader">
+  Users
+  <%= form_tag users_path, method: :get, id: 'search-users', class: 'search-form' do %>
+      <%= link_to '', users_path, class: 'general-enclosed foundicon-search', onclick: "$('#search-users').submit()" %>
+      <%= text_field_tag :user_q, params[:user_q], placeholder: 'search' %>
+  <% end %>
+</h3>
 
 <div class="users">
   <% @users.in_groups_of(6) do |group| %>

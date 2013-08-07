@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: git://github.com/ernie/ransack.git
-  revision: 43fff052ca7a850103c2ac122c99541cd34cf48d
+  revision: 8db7a3c1f4242305488a541267dd87c5397f5707
   branch: rails-4
   specs:
     ransack (0.7.3)
@@ -28,9 +28,9 @@ GIT
 
 GIT
   remote: git://github.com/josevalim/inherited_resources.git
-  revision: 2656ca0cea51cc7469be1d30cace24752d5b4e3b
+  revision: ae1516a3f1a01f98beac3334f76831a1c793c521
   specs:
-    inherited_resources (1.4.0)
+    inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
       responders (~> 1.0.0.rc)
 
@@ -92,7 +92,7 @@ GEM
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (4.0.0)
-    atomic (1.1.10)
+    atomic (1.1.12)
     bcrypt-ruby (3.1.1)
     better_errors (0.9.0)
       coderay (>= 1.0.0)
@@ -145,7 +145,7 @@ GEM
     jquery-rails (2.3.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (4.0.3)
+    jquery-ui-rails (4.0.4)
       jquery-rails
       railties (>= 3.1.0)
     json (1.8.0)
@@ -157,8 +157,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     minitest (4.7.5)
-    multi_json (1.7.7)
-    mysql2 (0.3.12)
+    multi_json (1.7.8)
+    mysql2 (0.3.13)
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
       rack
@@ -190,7 +190,7 @@ GEM
       json (~> 1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    sass (3.2.9)
+    sass (3.2.10)
     sass-rails (4.0.0)
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
@@ -208,7 +208,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     thor (0.18.1)
-    thread_safe (0.1.0)
+    thread_safe (0.1.2)
       atomic
     tilt (1.4.1)
     tire (0.6.0)

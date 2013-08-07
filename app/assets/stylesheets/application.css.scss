@@ -71,6 +71,27 @@ body {
   h3.subheader {
     border-bottom: 1px solid $border-color;
     padding-left: $header-padding;
+
+    .search-form {
+
+      float: right;
+      margin: 0;
+      width: 30%;
+
+      a {
+        float: right;
+        font-size: 19px;
+      }
+
+      input {
+        height: 25px;
+        font-size: 12px;
+        padding: 2px 7px;
+        float: left;
+        width: 90%;
+      }
+    }
+
   }
 
   .sub-nav {

@@ -1,6 +1,12 @@
 <% content_for :title, title('Tags') %>
 
-<h3 class="subheader">Tags</h3>
+<h3 class="subheader">
+  Tags
+  <%= form_tag tags_path, method: :get, id: 'search-tags', class: 'search-form' do %>
+      <%= link_to '', tags_path, class: 'general-enclosed foundicon-search', onclick: "$('#search-tags').submit()" %>
+      <%= text_field_tag :tag_q, params[:tag_q], placeholder: 'search' %>
+  <% end %>
+</h3>
 
 <div class="tags">
   <% @tags.in_groups_of(6) do |group| %>

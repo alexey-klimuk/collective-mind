@@ -10,6 +10,9 @@ class HomeController < ApplicationController
 
   def tags
     @tags = Question.tag_counts_on(:tags).order('count desc')
+    if params[:tag_q]
+      @tags = @tags.where('name LIKE ?', "%#{params[:tag_q]}%")
+    end
   end
 
   def about
