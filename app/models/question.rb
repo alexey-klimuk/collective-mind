@@ -13,19 +13,6 @@ class Question < ActiveRecord::Base
 
   scope :active, -> { where(active: true) }
 
-  def self.search(params)
-    @results = active
-
-    if params[:search]
-      @results = @results.where('title LIKE ? OR body LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%")
-    end
-
-    if params[:tag]
-      @results = @results.tagged_with(params[:tag])
-    end
-    @results
-  end
-
   def rating
     self.upvotes.length - self.downvotes.length
   end

@@ -1,5 +1,13 @@
 <% content_for :title, title('Questions') %>
 
+<h3 class="subheader">
+  Questions
+  <%= search_form_for @search, method: :get, id: 'search-questions', class: 'search-form'  do |f| %>
+      <%= link_to '', questions_path, class: 'general-enclosed foundicon-search', onclick: "$('#search-questions').submit()" %>
+      <%= f.text_field :title_or_body_cont, placeholder: 'search' %>
+  <% end %>
+</h3>
+
 <div class="questions row">
   <div class="large-9 columns">
     <%= render :partial => 'home/question', :collection => @questions %>

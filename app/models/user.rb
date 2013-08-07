@@ -27,14 +27,6 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :profile
 
-  def self.search(params)
-    if params[:user_q]
-      joins(:profile).where('profiles.last_name LIKE ? OR profiles.first_name LIKE ?', "%#{params[:user_q]}%", "%#{params[:user_q]}%")
-    else
-      all
-    end
-  end
-
   def full_name
     profile.full_name
   end

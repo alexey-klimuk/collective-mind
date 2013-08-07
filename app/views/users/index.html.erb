@@ -2,9 +2,9 @@
 
 <h3 class="subheader">
   Users
-  <%= form_tag users_path, method: :get, id: 'search-users', class: 'search-form' do %>
+  <%= search_form_for @search, method: :get, id: 'search-users', class: 'search-form'  do |f| %>
       <%= link_to '', users_path, class: 'general-enclosed foundicon-search', onclick: "$('#search-users').submit()" %>
-      <%= text_field_tag :user_q, params[:user_q], placeholder: 'search' %>
+      <%= f.text_field :profile_first_name_or_profile_last_name_cont, placeholder: 'search' %>
   <% end %>
 </h3>
 

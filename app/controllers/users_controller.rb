@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   authorize_resource class: 'User'
 
   def index
-    @users = User.search(params)
+    @search = User.search(params[:q])
+    @users = @search.result
   end
 
   def show
