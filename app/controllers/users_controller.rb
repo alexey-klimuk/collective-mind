@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def index
     @search = User.search(params[:q])
-    @users = @search.result
+    @users = @search.result.page(params[:page]).per(18)
   end
 
   def show
