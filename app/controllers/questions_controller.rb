@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
 
   def index
     @search = Question.active.search(params[:q])
-    @questions = @search.result
+    @questions = @search.result.page(params[:page]).per(10)
     if params[:tag]
       @questions = @questions.tagged_with(params[:tag])
     end
@@ -35,7 +35,7 @@ class QuestionsController < ApplicationController
 
   def vote
     if current_user.voted_on?(@question)
-      redirect_to dest_path, flash: { success: t('crud.vote.duplicate') }
+      redirect_to dest_path, flash: { warning: t('crud.vote.duplicate') }
     else
       vote = ActsAsVotable::Helpers::VotableWords.meaning_of(params[:vote])
       @question.vote voter: current_user, vote: vote

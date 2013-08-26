@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @questions = Question.active
+    @questions = Question.active.page(params[:page]).per(10)
     #flash[:error] = "Error error error"
     #flash[:notice] = "Notice notice notice"
     #flash[:success] = "Success success success"

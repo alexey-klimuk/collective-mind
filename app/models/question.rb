@@ -11,7 +11,7 @@ class Question < ActiveRecord::Base
   belongs_to :user
   has_many :solutions
 
-  scope :active, -> { where(active: true) }
+  scope :active, -> { where(active: true).order('created_at DESC') }
 
   def rating
     self.upvotes.length - self.downvotes.length
