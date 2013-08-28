@@ -1,4 +1,5 @@
 class Solution < ActiveRecord::Base
+  include PublicActivity::Common
 
   acts_as_votable
 

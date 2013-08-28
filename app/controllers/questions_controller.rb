@@ -26,6 +26,7 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
 
     if @question.save
+      @question.create_activity key: 'question.create', owner: current_user
       redirect_to dest_path, flash: { success: t('crud.create.success') }
     else
       flash[:error] = t('crud.create.fail')

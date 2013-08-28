@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    @activities = PublicActivity::Activity.order("created_at desc").where(owner_id: @user.id, owner_type: "User")
   end
 
   def edit
@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
+      @user.create_activity key: 'user.update', owner: current_user
       redirect_to user_path(@user), flash: { success: t('crud.update.success') }
     else
       flash.now[:error] = t('crud.update.fail')

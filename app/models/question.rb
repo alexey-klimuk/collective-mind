@@ -1,7 +1,7 @@
 class Question < ActiveRecord::Base
+  include PublicActivity::Common
 
   acts_as_votable
-
   acts_as_taggable
 
   validates_presence_of :title, :body
@@ -11,7 +11,7 @@ class Question < ActiveRecord::Base
   belongs_to :user
   has_many :solutions
 
-  scope :active, -> { where(active: true).order('created_at DESC') }
+  scope :active, -> { where(active: true).order('questions.created_at DESC') }
 
   def rating
     self.upvotes.length - self.downvotes.length

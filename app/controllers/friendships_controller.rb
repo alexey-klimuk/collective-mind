@@ -7,6 +7,7 @@ class FriendshipsController < ApplicationController
   def create
     @friendship = current_user.friendships.create!(friend_id: params[:friend_id])
     if @friendship
+      @friendship.create_activity key: 'friendship.create', owner: current_user
       redirect_to dest_path, flash: { success: t('crud.create.success') }
     else
       redirect_to dest_path, flash: { success: t('crud.create.fail') }
@@ -16,6 +17,7 @@ class FriendshipsController < ApplicationController
   def destroy
     @friendship = current_user.friendships.find(params[:id])
     if @friendship.destroy
+      @friendship.create_activity key: 'friendship.destroy', owner: current_user
       redirect_to dest_path, flash: { success: t('crud.delete.success') }
     else
       redirect_to dest_path, flash: { success: t('crud.delete.fail') }

@@ -9,6 +9,7 @@ class SolutionsController < ApplicationController
     @solution = Solution.new(solution_params)
 
     if @solution.save
+      @solution.create_activity key: 'solution.create', owner: current_user
       redirect_to dest_path, flash: { success: t('crud.create.success') }
     else
       redirect_to root_path, flash: { error: t('crud.create.fail') }

@@ -21,6 +21,7 @@ gem 'inherited_resources', github: 'josevalim/inherited_resources'
 #acts
 gem 'acts-as-taggable-on'
 gem 'acts_as_votable'
+gem 'public_activity'
 
 #searching
 gem 'tire'
