@@ -1,0 +1,10 @@
+<a class="general-enclosed foundicon-trash"></a>
+
+removed a friend
+
+<% if activity.trackable %>
+  <%= link_to activity.trackable.friend.full_name, activity.trackable.friend %>
+<% else %>
+  which has since been removed
+<% end %>
+

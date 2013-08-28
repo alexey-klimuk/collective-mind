@@ -1,9 +1,10 @@
-<li>
-    updated a profile
+<a class="general-enclosed foundicon-edit"></a>
 
-    <% if activity.trackable %>
-      <%= link_to activity.trackable.full_name, activity.trackable %>
-    <% else %>
-      which has since been removed
-    <% end %>
-</li>
+updated a profile
+
+<% if activity.trackable %>
+  <%= link_to activity.trackable.full_name, activity.trackable %>
+<% else %>
+  which has since been removed
+<% end %>
+
