@@ -1,7 +1,9 @@
 class HomeController < ApplicationController
 
   def index
-    @questions = Question.active.page(params[:page]).per(10)
+    @questions = Question.active.limit(10)
+    @tags = Question.tag_counts_on(:tags).order('count desc').limit(10)
+    @users = User.all.limit(10)
     #flash[:error] = "Error error error"
     #flash[:notice] = "Notice notice notice"
     #flash[:success] = "Success success success"

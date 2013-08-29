@@ -1,4 +1,21 @@
 <div class="question row panel radius">
+    <div class="large-2 columns">
+      <ul class="no-bullet activity">
+        <li>
+          <strong><%= count(question.votes.length) %></strong>
+          <span><%= "vote".pluralize(0)%></span>
+        </li>
+        <li>
+          <strong><%= count(question.solutions.length.to_i) %></strong>
+          <span><%= "solution".pluralize(question.solutions.length)%></span>
+        </li>
+        <li>
+          <strong><%= count(0) %></strong>
+          <span><%= "view".pluralize(0)%></span>
+        </li>
+      </ul>
+
+    </div>
     <div class="large-10 columns">
       <blockquote class="left">
         <h5 class="title"><%= link_to question.title, question_path(question) %></h5>
