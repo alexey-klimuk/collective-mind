@@ -65,10 +65,20 @@ body {
     margin-top: 20px;
   }
 
-  footer {
+  #content:after {
+      clear: both;
+  }
+  #content:before,
+  #content:after {
+      content: " ";
+      display: table;
   }
 
-  h3.subheader {
+  footer {
+    margin-top: emCalc(20px);
+  }
+
+  h3.subheader, h4.subheader {
     border-bottom: 1px solid $border-color;
     padding-left: $header-padding;
 

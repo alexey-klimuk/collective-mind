@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @activities = PublicActivity::Activity.order("created_at desc").where(owner_id: @user.id, owner_type: "User")
+    @activities = PublicActivity::Activity.order("created_at desc").where(owner_id: @user.id, owner_type: "User").limit(10)
+    @questions = @user.questions.order("created_at desc").limit(10)
   end
 
   def edit

@@ -51,5 +51,13 @@
     </div>
   </div>
 </div>
-
-<%= render_activities(@activities, layout: :activity) %>
+<div class="user-activity row left">
+  <div class="large-6 columns activity">
+    <h4 class="subheader">Activity</h4>
+    <%= render_activities(@activities, layout: :activity) %>
+  </div>
+  <div class="large-6 columns questions">
+    <h4 class="subheader">Questions</h4>
+    <%= render partial: 'users/question', collection: @questions %>
+  </div>
+</div>

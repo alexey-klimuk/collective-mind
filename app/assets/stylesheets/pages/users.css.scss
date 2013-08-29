@@ -28,3 +28,37 @@
   }
 
 }
+
+.users-page {
+
+  .user-activity {
+    div.questions, div.activity {
+      padding-left: 0;
+
+      div.row {
+        margin-left: $header-padding;
+        padding: 5px 0;
+        width: 100%;
+
+        a[class*="foundicon-"]{
+          font-size: emCalc(35px);
+          color: lighten($body-font-color, 70%);
+          margin-right: 10px;
+          float: left;
+          vertical-align: top;
+        }
+
+        a:link {
+          font-size: emCalc(14px);
+          vertical-align: top;
+        }
+
+        span {
+          font-size: 12px;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+
+}
