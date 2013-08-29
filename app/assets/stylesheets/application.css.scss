@@ -51,6 +51,11 @@ body {
       float: left;
     }
 
+    #user-email:hover {
+      color: lighten($blue-color, 50%);
+      text-shadow: 0 0 6px lighten($blue-color, 30%);
+    }
+
     #search {
       form {
         display: inline-block;

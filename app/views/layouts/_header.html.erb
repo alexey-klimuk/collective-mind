@@ -10,7 +10,7 @@
         <ul class="right">
           <li class="divider"></li>
           <% if user_signed_in? %>
-          <li class="has-dropdown"><a><%= link_to current_user.email, user_path(current_user) %></a>
+          <li class="has-dropdown"><%= link_to current_user.email, user_path(current_user), id: 'user-email' %>
             <ul class="dropdown">
               <% if current_user.is_active_admin? %>
               <li><%= link_to "Admin", '/admin', 'data-no-turbolink' => true  %></li>
