@@ -6,7 +6,7 @@
 
 <div class="user-info row left">
   <div class="large-2 columns">
-    <strong>Avatar</strong>
+    <%= image_tag(@user.avatar_url(:medium)) if @user.avatar? %>
     <% if current_user && current_user != @user %>
       <% if current_user.friends.include? @user %>
         <%= button_to "Remove Friend", current_user.friendships.find_by_friend_id(@user.id), method: :delete %>

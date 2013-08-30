@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
   acts_as_voter
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :role_ids, :profile_attributes
+  attr_accessible :email, :avatar, :password, :password_confirmation, :remember_me, :role_ids, :profile_attributes
 
   after_create :assign_member_role
 

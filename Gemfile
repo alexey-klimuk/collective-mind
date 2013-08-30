@@ -18,6 +18,8 @@ gem 'responders',          github: 'plataformatec/responders'
 gem 'activeadmin',         github: 'akashkamboj/active_admin', branch: 'rails4'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'carrierwave'
+#gem "rmagick"
+gem "mini_magick"
 
 #acts
 gem 'acts-as-taggable-on'
