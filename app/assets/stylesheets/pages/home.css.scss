@@ -62,9 +62,32 @@
 }
 
 .home-page {
+
+  h4 {
+    span {
+      font-size: 12px;
+      color: lighten($body-font-color, 10%);
+      margin-left: 5px;
+    }
+  }
+
+  .questions {
+    .question {
+      padding: 5px;
+      margin-bottom: 10px;
+
+      h5 {
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+  }
   .tags {
     .tag {
       width: 100%;
+      a {
+        margin: 0;
+      }
     }
   }
 }

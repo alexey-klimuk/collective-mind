@@ -2,15 +2,24 @@
 
 <div class="user-activity row left">
   <div class="large-6 columns questions">
-    <h4 class="subheader">Questions</h4>
+    <h4 class="subheader">
+      Questions
+      <span>(latest)</span>
+    </h4>
     <%= render :partial => 'home/question', :collection => @questions %>
   </div>
   <div class="large-3 columns tags">
-    <h4 class="subheader">Tags</h4>
+    <h4 class="subheader">
+      Tags
+      <span>(most popular)</span>
+    </h4>
     <%= render :partial => 'home/tag', :collection => @tags %>
   </div>
   <div class="large-3 columns users">
-    <h4 class="subheader">Users</h4>
+    <h4 class="subheader">
+      Users
+      <span>(most active)</span>
+    </h4>
     <ul class="no-bullet"><%= render :partial => 'home/user', :collection => @users %></ul>
   </div>
 

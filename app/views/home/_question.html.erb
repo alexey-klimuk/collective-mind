@@ -1,15 +1,5 @@
 <div class="question row panel radius">
     <div class="large-10 columns">
-      <blockquote class="left">
         <h5 class="title"><%= link_to question.title, question_path(question) %></h5>
-        <ul class="breadcrumbs">
-          <% question.tags.each do |t| %>
-            <li><%= link_to t.name, tagged_questions_path(t.name) %></li>
-          <% end %>
-        </ul>
-        <cite class="right">
-          <%= time_ago_in_words(question.created_at) %> ago by <%= link_to question.user.full_name, user_path(question.user) %>
-        </cite>
-      </blockquote>
     </div>
 </div>
