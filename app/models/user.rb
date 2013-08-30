@@ -1,6 +1,8 @@
+require 'carrierwave/orm/activerecord'
+
 class User < ActiveRecord::Base
   include PublicActivity::Common
-
+  mount_uploader :avatar, AvatarUploader
   acts_as_voter
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role_ids, :profile_attributes
