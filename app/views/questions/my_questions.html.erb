@@ -1,0 +1,17 @@
+<% content_for :title, title('Manage my questions') %>
+
+<h3 class="subheader">
+  Manage my questions
+  <%= search_form_for @search, method: :get, id: 'search-questions', class: 'search-form'  do |f| %>
+      <%= link_to '', my_questions_path, class: 'general-enclosed foundicon-search', onclick: "$('#search-questions').submit()" %>
+      <%= f.text_field :title_or_body_cont, placeholder: 'search' %>
+  <% end %>
+</h3>
+
+<div class="questions row">
+  <div class="large-12 columns">
+    <%= render :partial => 'questions/question', :collection => @questions %>
+  </div>
+</div>
+<%= paginate @questions %>
+

@@ -14,6 +14,17 @@ class QuestionsController < ApplicationController
     @tags = @questions.tag_counts_on(:tags).order('count desc')
   end
 
+  def my_questions
+    @search = Question.by_user(current_user).search(params[:q])
+    @questions = @search.result.page(params[:page]).per(10)
+  end
+
+  def by_user
+    @user = User.where(id: params[:id]).first
+    @search = Question.by_user(@user).active.search(params[:q])
+    @questions = @search.result.page(params[:page]).per(10)
+  end
+
   def new
     @question = Question.new
   end

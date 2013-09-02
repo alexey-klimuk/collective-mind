@@ -57,7 +57,10 @@
     <%= render_activities(@activities, layout: :activity) %>
   </div>
   <div class="large-6 columns questions">
-    <h4 class="subheader">Questions</h4>
+    <h4 class="subheader">
+      Questions
+      <span>(<%= link_to 'view all', users_questions_path(@user) %>)</span>
+    </h4>
     <%= render partial: 'users/question', collection: @questions %>
   </div>
 </div>

@@ -8,6 +8,8 @@ CollectiveMind::Application.routes.draw do
 
   get 'tags', to: 'home#tags', as: :tags
   get 'questions/tagged/:tag', to: 'questions#index', as: :tagged_questions
+  get 'questions/by_user/:id', to: 'questions#by_user', as: :users_questions
+  get 'my_questions/', to: 'questions#my_questions', as: :my_questions
 
   devise_for :users, controllers: { registrations: 'registrations',
                                     sessions: 'sessions'}

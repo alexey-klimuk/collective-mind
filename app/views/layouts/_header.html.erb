@@ -15,6 +15,7 @@
               <% if current_user.is_active_admin? %>
               <li><%= link_to "Admin", '/admin', 'data-no-turbolink' => true  %></li>
               <% end %>
+              <li><%= link_to 'My Questions', my_questions_path %></li>
               <li><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
               <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
             </ul>

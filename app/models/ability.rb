@@ -4,7 +4,7 @@ class Ability
   def initialize(user)
     user ||= User.new
 
-    can [:show, :index], Question
+    can [:show, :index, :by_user], Question
     can [:show, :index], User
 
     if user.has_role?(:admin)
@@ -20,6 +20,7 @@ class Ability
     if user.has_role?(:member)
       can [:edit, :delete], Question, :user_id => user.id
       can [:create, :vote], Question
+      can [:my_questions], Question
       can [:edit, :delete], Solution, :user_id => user.id
       can [:create, :vote], Solution
       can [:edit, :update], User, :id => user.id
