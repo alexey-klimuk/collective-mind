@@ -6,6 +6,7 @@
         <%= form.input :first_name, label: ':first name:' %>
         <%= form.input :last_name, label: ':last name' %>
         <%= form.input :birth, as: :string, label: ':birth date', input_html: { class: 'fdatepicker' }   %>
+        <%= image_tag(@user.avatar_url(:medium)) if @user.avatar? %>
         <%= f.input :avatar, as: :file, label: ':avatar' %>
 
       <% end %>

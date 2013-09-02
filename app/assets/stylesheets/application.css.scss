@@ -39,7 +39,7 @@ body {
     } @else {
       background: $topbar-bg;
     }
-    @include box-shadow(0px, 0px, 11px, 5px, rgba(0, 0, 0, 0.2));
+    //@include box-shadow(0px, 0px, 11px, 5px, rgba(0, 0, 0, 0.2));
   }
   .contain-to-grid {
     background: transparent;
@@ -64,7 +64,7 @@ body {
   }
 
   #content {
-    min-height: emCalc(450px);
+    min-height: emCalc(400px);
     margin: 0 auto;
     width: $content-width;
     margin-top: 20px;
@@ -81,6 +81,35 @@ body {
 
   footer {
     margin-top: emCalc(20px);
+
+    .footer-top {
+      color: #ffffff;
+      font-family: "Proxima Nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+      margin-top: 1em;
+      padding: 10px 0;
+      background: darken($primary-color, 10%);
+
+
+      .row {
+        .columns {
+          border-left: 1px solid rgba(255, 255, 255, 0.2);
+          padding: 40px 0;
+          text-align: center;
+        }
+
+        .columns:first-of-type {
+          border-left: 1px solid transparent;
+        }
+      }
+    }
+
+    .footer-bottom {
+      background: $topbar-bg;
+    }
+
+    ul.inline-list {
+      margin: 10px 0;
+    }
   }
 
   h3.subheader, h4.subheader {

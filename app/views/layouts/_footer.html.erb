@@ -1,9 +1,31 @@
-<footer class="row">
-  <hr>
-  <ul class="inline-list">
-    <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'About', about_path %></li>
-    <li><%= link_to 'Help', help_path %></li>
-    <li><%= link_to 'Contact', contact_path %></li>
-  </ul>
+<footer>
+  <div class="footer-top">
+    <div class="row">
+      <div class="large-3 columns">Some content 1</div>
+      <div class="large-3 columns">Some content 2</div>
+      <div class="large-3 columns">Some content 3</div>
+      <div class="large-3 columns">Some content 4</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="row">
+
+      <div class="small-4 push-8 columns">
+        <ul class="inline-list home-social">
+          <li><a class="twitter" href="http://www.twitter.com/ZURB"></a></li>
+          <li><a class="facebook" href="http://www.facebook.com/ZURB"></a></li>
+          <li><a class="mail" href="/contact"></a></li>
+        </ul>
+      </div>
+
+      <div class="small-8 pull-4 columns">
+        <ul class="inline-list links">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Help', help_path %></li>
+          <li><%= link_to 'Contact', contact_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </footer>
