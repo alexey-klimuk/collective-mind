@@ -69,7 +69,7 @@ body {
 
     #user-email:hover {
       color: lighten($blue-color, 50%);
-      text-shadow: 0 0 6px lighten($blue-color, 30%);
+      //text-shadow: 0 0 6px lighten($blue-color, 30%);
     }
 
     #search {
@@ -129,7 +129,7 @@ body {
     width: $content-width;
     background: #ffffff;
     @include box-shadow(0px, 0px, 15px, 0px, rgba(0, 0, 0, 0.2));
-    padding: 40px 30px 50px 30px;
+    padding: 31px 30px 50px 30px;
 
     &:after {
       clear: both;
@@ -181,6 +181,7 @@ body {
   h3.subheader, h4.subheader {
     border-bottom: 1px solid $border-color;
     padding-left: $header-padding;
+    margin-top: 0;
 
     .search-form {
 
