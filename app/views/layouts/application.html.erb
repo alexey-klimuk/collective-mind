@@ -24,20 +24,15 @@
 
     <%= render 'layouts/header' %>
 
-    <div id="content">
-
+    <section id="main">
       <%= raw flash_messages %>
-
-      <dl class="sub-nav">
-        <dd class=<%= 'active' if current_page?(questions_path) %>><%= link_to "Questions", questions_path %></dd>
-        <dd class=<%= 'active' if current_page?(tags_path) %>><%= link_to "Tags", tags_path %></dd>
-        <dd class=<%= 'active' if current_page?(users_path) %>><%= link_to "Users", users_path %></dd>
-        <dd class=<%= 'active' if current_page?(new_question_path) %>><%= link_to "Ask", new_question_path %></dd>
-      </dl>
-
+      <div class="main-sub-nav">
+        <%= render partial: 'layouts/sub_nav' %>
+      </div>
+      <div id='content'>
         <%= yield %>
-
-    </div>
+      </div>
+    </section>
 
     <%= render 'layouts/footer' %>
 

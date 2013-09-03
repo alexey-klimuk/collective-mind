@@ -25,13 +25,14 @@
 
     <%= render 'layouts/header' %>
 
-    <div id="content">
-
+    <section id="main">
       <%= raw flash_messages %>
+      <div class="main-sub-nav"></div>
+        <div id="content">
 
-      <%= yield %>
-
-    </div>
+          <%= yield %>
+        </div>
+    </section>
 
     <%= render 'layouts/footer' %>
 

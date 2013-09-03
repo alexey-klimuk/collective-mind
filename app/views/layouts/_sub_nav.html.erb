@@ -1,0 +1,29 @@
+<div class="row">
+  <ul class="sub-nav">
+    <li class=<%= 'active' if current_page?(root_path) %>>
+      <%= link_to root_path, title: 'Home' do %>
+        <span>Home</span>
+      <% end %>
+    </li>
+    <li class=<%= 'active' if current_page?(questions_path) %>>
+      <%= link_to questions_path, title: 'Questions' do %>
+        <span>Questions</span>
+      <% end %>
+    </li>
+    <li class=<%= 'active' if current_page?(tags_path) %>>
+      <%= link_to tags_path, title: 'Tags' do %>
+        <span>Tags</span>
+      <% end %>
+    </li>
+    <li class=<%= 'active' if current_page?(users_path) %>>
+      <%= link_to users_path, title: 'Users' do %>
+        <span>Users</span>
+      <% end %>
+    </li>
+    <li class=<%= 'active' if current_page?(new_question_path) %>>
+      <%= link_to new_question_path, title: 'Ask a question' do %>
+        <span>Ask</span>
+      <% end %>
+    </li>
+  </ul>
+</div>
