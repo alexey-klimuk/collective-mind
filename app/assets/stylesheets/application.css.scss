@@ -68,7 +68,7 @@ body {
     }
 
     #user-email:hover {
-      color: lighten($blue-color, 50%);
+      color: lighten($blue-color, 10%);
       //text-shadow: 0 0 6px lighten($blue-color, 30%);
     }
 
@@ -147,6 +147,15 @@ body {
 
   footer {
     margin-top: emCalc(60px);
+
+    ul.home-social {
+      margin: 0;
+      float: right;
+
+      a[class*="foundicon-"]{
+        font-size: emCalc(20px);
+      }
+    }
 
     .footer-top {
       color: #ffffff;
