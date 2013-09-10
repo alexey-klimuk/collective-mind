@@ -5,6 +5,7 @@ CollectiveMind::Application.routes.draw do
   get 'about', to: 'home#about'
   get 'help', to: 'home#help'
   get 'contact', to: 'home#contact'
+  get 'sitemap', to: 'home#sitemap'
 
   get 'tags', to: 'home#tags', as: :tags
   get 'questions/tagged/:tag', to: 'questions#index', as: :tagged_questions

@@ -1,10 +1,27 @@
 <footer>
   <div class="footer-top">
     <div class="row">
-      <div class="large-3 columns">Some content 1</div>
-      <div class="large-3 columns">Some content 2</div>
-      <div class="large-3 columns">Some content 3</div>
-      <div class="large-3 columns">Some content 4</div>
+      <div class="large-3 columns">
+        <h4><%= link_to 'Collective Mind', root_path %> </h4>
+        <p>Collective Mind was designed by Alexey Klimuk for demonstrating joint work of Rails 4, Backbone.js and ZURB Foundation.</p>
+      </div>
+      <div class="large-3 columns">
+        <h4>Technologies</h4>
+        <%= link_to 'Rubu on Rails', 'http://rubyonrails.org/', class: 'row' %>
+        <%= link_to 'Backbone.js', 'http://backbonejs.org', class: 'row' %>
+        <%= link_to 'ZURB Foundation', 'http://foundation.zurb.com/', class: 'row' %>
+      </div>
+      <div class="large-3 columns">
+        <h4>Want more?</h4>
+        <%= link_to 'Site Map', sitemap_path, class: 'row' %>
+        <%= link_to 'Home Page', root_path, class: 'row' %>
+        <%= link_to 'Registration', new_user_registration_path, class: 'row' %>
+      </div>
+      <div class="large-3 columns">
+        <h4>Talk to us</h4>
+        <p>Call us at (408) 341-0600</p>
+        <p>Not a big talker? Email us at <%= link_to 'me@domain.com', 'mailto:me@domain.com' %></p>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
