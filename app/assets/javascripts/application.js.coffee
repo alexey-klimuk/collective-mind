@@ -6,6 +6,7 @@
 #= require ./namespace
 #= require ./notifications
 #= require_directory ./pages
+#= require ./backbone/collective_mind
 
 app = namespace('CollectiveMind')
 notify = namespace('notify', app)

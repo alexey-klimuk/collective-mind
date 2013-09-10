@@ -138,6 +138,7 @@ GEM
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
+    ejs (1.0.0)
     erubis (2.7.0)
     execjs (2.0.1)
     flash_messages_helper (0.2.1)
@@ -191,6 +192,10 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
+    rails-backbone (0.7.2)
+      coffee-script (~> 2.2.0)
+      ejs (~> 1.0.0)
+      railties (>= 3.1.0)
     rake (10.1.0)
     ransack (1.0.0)
       actionpack (>= 3.0)
@@ -273,6 +278,7 @@ DEPENDENCIES
   protected_attributes
   public_activity
   rails!
+  rails-backbone
   ransack
   responders!
   sass-rails
