@@ -2,6 +2,19 @@
 
 
 app = namespace('CollectiveMind')
+notify = namespace('notify', app)
+config = namespace('config', app)
+
+# Configure flash notifications
+# --------------------------------------------------------------------------
+config.notifications =
+
+  selectors:
+    element : '.notification'
+    error   : ['.error', '.failure', '.alert']
+    warning : ['.warning']
+    success : ['.success']
+    notice  : ['.notice']
 
 # Configure notifications: See https://github.com/sciactive/pnotify
 
@@ -74,11 +87,11 @@ $ ->
   $.each ['error', 'warning', 'success', 'notice'], (i,level) ->
     notif_sel = config.notifications.selectors
     notif_level_sel = notif_sel[level]
-    console.log("--------")
-    console.log(notif_level_sel)
-    console.log(level)
-    console.log(notif_sel)
-    console.log(notif_sel.element)
+#    console.log("--------")
+#    console.log(notif_level_sel)
+#    console.log(level)
+#    console.log(notif_sel)
+#    console.log(notif_sel.element)
     # Notification selectors are composed of .[element class].[level class]
     notif_level_sel = $.map notif_level_sel, (sel) ->
       notif_sel.element + sel

@@ -1,5 +1,7 @@
 #= require jquery
 #= require jquery_ujs
+#= require underscore
+#= require backbone
 #= require turbolinks
 #= require foundation
 #= require foundation-datepicker
@@ -9,21 +11,6 @@
 #= require ./backbone/collective_mind
 
 app = namespace('CollectiveMind')
-notify = namespace('notify', app)
-config = namespace('config', app)
-
-# Configure flash notifications
-# --------------------------------------------------------------------------
-config.notifications =
-
-  selectors:
-    element : '.notification'
-    error   : ['.error', '.failure', '.alert']
-    warning : ['.warning']
-    success : ['.success']
-    notice  : ['.notice']
-
-
 
 $ ->
   $(document).foundation()

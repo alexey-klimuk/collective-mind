@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_user!, except: [:show, :index, :by_user]
   before_action :set_question, only: [:show, :vote]
 
   authorize_resource class: 'Question'

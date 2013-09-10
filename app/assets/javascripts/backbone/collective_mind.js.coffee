@@ -2,21 +2,7 @@
 #= require_tree ./templates
 #= require_tree ./models
 #= require_tree ./views
-#= require_tree ./routers
 
-window.CollectiveMind =
-  Models: {}
-  Collections: {}
-  Routers: {}
-  Views: {}
-  initialize: ->
-      new CollectiveMind.Routers.Application
-      Backbone.history.start pushState: true
+app = namespace('CollectiveMind')
+[models, collections, views, routers] = namespace(['models','collections', 'views', 'routers'], app)
 
-
-$(document).ready ->
-  CollectiveMind.initialize()
-
-$(document).on 'page:load', ->
-  Backbone.history.stop()
-  CollectiveMind.initialize()
