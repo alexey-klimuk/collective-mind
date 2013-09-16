@@ -31,6 +31,7 @@ gem 'formtastic',          github: 'justinfrench/formtastic'
 gem 'acts-as-taggable-on'
 gem 'acts_as_votable'
 gem 'public_activity'
+gem 'impressionist'
 
 #searching
 gem 'tire'

@@ -10,7 +10,7 @@
           <span><%= "solution".pluralize(question.solutions.length)%></span>
         </li>
         <li>
-          <strong><%= count(0) %></strong>
+          <strong><%= count(question.impressionist_count(:filter=>:all)) %></strong>
           <span><%= "view".pluralize(0)%></span>
         </li>
       </ul>

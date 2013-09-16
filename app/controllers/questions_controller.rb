@@ -1,5 +1,7 @@
 class QuestionsController < ApplicationController
 
+  impressionist actions: [:show], unique: [:impressionable_type, :impressionable_id, :session_hash, :user_id, :ip_address]
+
   before_action :authenticate_user!, except: [:show, :index, :by_user]
   before_action :set_question, only: [:show, :vote]
 
