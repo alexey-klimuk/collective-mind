@@ -1,4 +1,4 @@
 collective-mind
 ===============
 
-test rails 4 app. using devise+cancan+active_admin
+test rails 4 app. using devise+cancan+active_admin+zurb_foundation
